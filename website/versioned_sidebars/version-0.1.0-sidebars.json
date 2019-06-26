@@ -1,0 +1,19 @@
+{
+  "version-0.1.0-docs": {
+    "Introduction": [
+      "version-0.1.0-doc1"
+    ],
+    "Loaders": [
+      "version-0.1.0-doc2"
+    ],
+    "Emitters": [
+      "version-0.1.0-doc3"
+    ]
+  },
+  "version-0.1.0-docs-other": {
+    "First Category": [
+      "version-0.1.0-doc4",
+      "version-0.1.0-doc5"
+    ]
+  }
+}

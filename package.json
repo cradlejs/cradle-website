@@ -1,0 +1,9 @@
+{
+  "name": "cradle-website",
+  "version": "1.0.0",
+  "description": "Website for cradle",
+  "main": "index.js",
+  "repository": "https://github.com/gatewayapps/cradle-website",
+  "author": "Daniel Gary <daniel@gatewayapps.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,19 @@
+{
+  "docs": {
+    "Introduction": [
+      "doc1"
+    ],
+    "Loaders": [
+      "doc2"
+    ],
+    "Emitters": [
+      "doc3"
+    ]
+  },
+  "docs-other": {
+    "First Category": [
+      "doc4",
+      "doc5"
+    ]
+  }
+}
