@@ -41,6 +41,7 @@ const siteConfig = {
     { doc: "doc1", label: "Docs" },
     { doc: "doc4", label: "API" },
     { page: "help", label: "Help" },
+    { href: "https://github.com/cradlejs/cradle", label: "Repo" },
     { blog: true, label: "Blog" }
   ],
 
