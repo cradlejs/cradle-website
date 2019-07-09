@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
+const React = require("react");
 
-const CompLibrary = require('../../core/CompLibrary.js');
+const CompLibrary = require("../../core/CompLibrary.js");
 
 const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
@@ -15,10 +15,10 @@ const GridBlock = CompLibrary.GridBlock;
 
 class HomeSplash extends React.Component {
   render() {
-    const {siteConfig, language = ''} = this.props;
-    const {baseUrl, docsUrl} = siteConfig;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
+    const { siteConfig, language = "" } = this.props;
+    const { baseUrl, docsUrl } = siteConfig;
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
+    const langPart = `${language ? `${language}/` : ""}`;
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
     const SplashContainer = props => (
@@ -65,8 +65,8 @@ class HomeSplash extends React.Component {
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
             <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href={docUrl("doc1.html")}>Example Link</Button>
+            <Button href={docUrl("doc2.html")}>Example Link 2</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -76,28 +76,19 @@ class HomeSplash extends React.Component {
 
 class Index extends React.Component {
   render() {
-    const {config: siteConfig, language = ''} = this.props;
-    const {baseUrl} = siteConfig;
+    const { config: siteConfig, language = "" } = this.props;
+    const { baseUrl } = siteConfig;
 
     const Block = props => (
-      <Container
-        padding={['bottom', 'top']}
-        id={props.id}
-        background={props.background}>
-        <GridBlock
-          align="center"
-          contents={props.children}
-          layout={props.layout}
-        />
+      <Container padding={["bottom", "top"]} id={props.id} background={props.background}>
+        <GridBlock align="center" contents={props.children} layout={props.layout} />
       </Container>
     );
 
     const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
+      <div className="productShowcaseSection paddingBottom" style={{ textAlign: "center" }}>
+        <h2>Cradle Power</h2>
+        <MarkdownBlock>How does Cradle help?</MarkdownBlock>
       </div>
     );
 
@@ -106,13 +97,14 @@ class Index extends React.Component {
         {[
           {
             content:
-              'To make your landing page more attractive, use illustrations! Check out ' +
-              '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
-              'The illustrations you see on this page are from unDraw.',
+              "To get started with Cradle <br />" +
+              "```yarn add -D @cradlejs/core``` <br />" +
+              "Once you have your cradle.yml configured, just call <br />```yarn cradle emit```<br /> to generate your code.",
             image: `${baseUrl}img/undraw_code_review.svg`,
-            imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
-          },
+            imageAlign: "left",
+
+            title: "Get Started"
+          }
         ]}
       </Block>
     );
@@ -122,11 +114,11 @@ class Index extends React.Component {
         {[
           {
             content:
-              'This is another description of how this project is useful',
-            image: `${baseUrl}img/undraw_note_list.svg`,
-            imageAlign: 'right',
-            title: 'Description',
-          },
+              "Without a single source of truth for your code, it's easy for bugs to show up.  Use Cradle to emit your types, data access code and validation methods and squash bugs before they show up.",
+            image: `${baseUrl}img/undraw_bug_fixing.svg`,
+            imageAlign: "right",
+            title: "Save time and squash bugs from the start"
+          }
         ]}
       </Block>
     );
@@ -136,11 +128,11 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
-            image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
-            imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
-          },
+              "Having a single source of truth for your data models is important.  Generating code to handle validation, type checking, and data access saves development time and makes your code more reliable.",
+            image: `${baseUrl}img/undraw_server.svg`,
+            imageAlign: "right",
+            title: "Single Source of Truth for your Code"
+          }
         ]}
       </Block>
     );
@@ -149,17 +141,19 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/undraw_react.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
+            content:
+              "Cradle transforms schemas into code.  Start with a Loader, then use Emitters to generate code.",
+            image: `${baseUrl}img/undraw_file_synchronization.svg`,
+            imageAlign: "top",
+            title: "Load your schema, emit code"
           },
           {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/undraw_operating_system.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
-          },
+            content:
+              "There are already existing emitters for TypeScript, GraphQL, and Sequelize, but if you need something new, use our Emitter API to create your own!",
+            image: `${baseUrl}img/undraw_open_source.svg`,
+            imageAlign: "top",
+            title: "Custom Emitters"
+          }
         ]}
       </Block>
     );
@@ -177,7 +171,7 @@ class Index extends React.Component {
           </a>
         ));
 
-      const pageUrl = page => baseUrl + (language ? `${language}/` : '') + page;
+      const pageUrl = page => baseUrl + (language ? `${language}/` : "") + page;
 
       return (
         <div className="productShowcaseSection paddingBottom">
@@ -185,7 +179,7 @@ class Index extends React.Component {
           <p>This project is used by all these people</p>
           <div className="logos">{showcase}</div>
           <div className="more-users">
-            <a className="button" href={pageUrl('users.html')}>
+            <a className="button" href={pageUrl("users.html")}>
               More {siteConfig.title} Users
             </a>
           </div>
